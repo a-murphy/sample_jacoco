@@ -2,6 +2,10 @@ language: java
 
 jdk:
   - oraclejdk8
+  
+env:
+  - ONE=true
+  - TWO=true
 
 build:
   ci:
@@ -9,3 +13,4 @@ build:
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
+    - if [ $ONE = true ]; fail; fi
