@@ -13,4 +13,4 @@ build:
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
-    - if [ $ONE = true ]; fail; fi
+    - if [ $ONE = true ]; then fail; fi
